@@ -200,5 +200,5 @@ def unregister():
     for cls in reversed(_CLASSES):
         bpy.utils.unregister_class(cls)
 
-if bpy is not None:
+if __name__ == "__main__" and bpy is not None:
     register()
